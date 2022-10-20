@@ -17,7 +17,9 @@ class Entity {
     }
 
     draw() { //метод отрисовывает птичку. Берет область  из спрайшита
+
         console.log('draw() this.x', this.x)
+        //Почему нет переменной this.y здесь ? Куда исчезает ?
         console.log('draw() this.y', this.y)
         console.log('draw() image', this._frames[0])
         console.log('draw() this._frameIdx', this._frameIdx)
