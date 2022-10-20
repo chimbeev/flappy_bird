@@ -10,13 +10,13 @@ class Config {
     spriteSheet = {
         width: 606,
         height: 428,
-        src: 'assets/sprite.png'
+        src: 'http://localhost:63342/flappy_bird/assets/sprite.png'
 
     }
 
     bird = { //обьект птичка с начальными координатами , шириной высотой
         x: 60,
-        y: 100,
+        y: 90,
         width: 34,
         height: 26,
 
@@ -38,7 +38,7 @@ class Config {
             { //фрейм где крылья вниз
                 x: 276,
                 y: 164,
-                w: 64,
+                w: 34,
                 h: 26,
             },
             { //фрейм средний где клылья посередине

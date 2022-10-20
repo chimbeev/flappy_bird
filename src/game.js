@@ -32,17 +32,20 @@ class Game {
     reset() {
         //Инициализация птички
         this._score = 0
+
         this._bird = new Bird ( {
             x: this._config.bird.x,
-            y: this._config.bird.y,
+            //y: this._config.bird.y,
+            y: 20,
             width: this._config.bird.width,
             height: this._config.bird.height,
             frames: this._config.bird.frames,
             spriteSheet: this._spriteSheet,
-            flapSpeed: this._config.bird.flapSpeed,
-            physicsEngine: this._physicsEngine,
             drawEngine: this._drawEngine,
             game: this,
+            flapSpeed: this._config.bird.flapSpeed,
+            physicsEngine: this._physicsEngine,
+
         })
     }
 
@@ -51,6 +54,8 @@ class Game {
     }
 
     draw() {
+        console.log('this bird y', this._bird.y)
+        console.log('this bird x', this._bird.x)
         this._bird.draw()
     }
 

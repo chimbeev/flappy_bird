@@ -1,6 +1,9 @@
 class Bird extends Entity {
     constructor(params) {
         super(params)
+        console.log('constructor Bird this.y', this.y)
+        console.log('constructor Bird this.x', this.x)
+        console.log('constructor Bird this.this._frameIdx ', this._frameIdx)
         this._flapSpeed = params.flapSpeed //скорость подьема птички
         this._physicsEngine = params.physicsEngine
         this.falling = true //Но птичка падает все время

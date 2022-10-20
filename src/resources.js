@@ -13,7 +13,7 @@ class ResourceLoader {
         }
     }
     async load(resource) { //Загрузка асинхронно ресурсов
-        const loader = this._typeLoadersMap[resource.type]
-        return await loader(resource)
+        const loader = this._typeLoadersMap[RESOURCE_TYPE]
+        return await loader
     }
 }
