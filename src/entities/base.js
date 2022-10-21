@@ -1,7 +1,7 @@
 class Entity {
     constructor({ x, y, width, height, frames, spriteSheet, drawEngine, game }) {
         this.x = x
-        this.y = y
+        this._y = y
         this.width = width
         this.height = height
         this._frames = frames //массив из фреймов с птичкой с разными крыльями и будем переключаться между ними для
@@ -11,32 +11,26 @@ class Entity {
         this._drawEngine = drawEngine
         this._game = game
         this.speed = 0
-        this._frameIdx = 0 //индекс текущего фрейма птички
+        this.frameIdx = 2 //индекс текущего фрейма птички
 
-        console.log('constructor this.y', this.y)
+        console.log('constructor this._y', this._y)
     }
 
     draw() { //метод отрисовывает птичку. Берет область  из спрайшита
-
+        let i = this.frameIdx
         console.log('draw() this.x', this.x)
-        //Почему нет переменной this.y здесь ? Куда исчезает ?
-        console.log('draw() this.y', this.y)
+        console.log('draw() this._y', this._y)
         console.log('draw() image', this._frames[0])
-        console.log('draw() this._frameIdx', this._frameIdx)
+        console.log('draw() this.frameIdx', this.frameIdx)
         console.log('draw() this.width', this.width)
         console.log('draw() this.height', this.height)
+        console.log('draw() this._frames', this._frames[2])
 
-        this._drawEngine.drawImage({
-            spriteSheet: this._spriteSheet,
+        this._drawEngine.drawImage( this._spriteSheet, this._frames[i], this.x, this._y, this.width, this.height)
             //image: this._frames[this._frameIdx],
             //image: 10,
-            image: this._frames[0],
-            x: this.x,
-            y: this.y,
-            //y: 30,
-            width: this.width,
-            height: this.height
-        })
+
+
     }
 
     update(delta) {

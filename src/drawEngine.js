@@ -1,5 +1,6 @@
 class DrawEngine {
-    drawImage({spriteSheet, image, x, y, width, height}) {
+    drawImage1(spriteSheet, image, x, y, width, height) {
+        console.log('class DrawImage image', image)
     }
     clear() {}
 }
@@ -11,8 +12,8 @@ class CanvasDrawEngine extends DrawEngine {
         this._context = this._canvas.getContext('2d')
     }
 
-    drawImage({spriteSheet, image, x, y, width, height}) {
-        var spriteSheet = document.getElementById('source');
+    drawImage(spriteSheet, image, x, y, width, height) {
+        spriteSheet = document.getElementById('source');
         //super.drawImage({ spriteSheet, image, x, y, width, height })
 
         console.log(image)

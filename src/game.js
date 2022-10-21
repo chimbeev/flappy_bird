@@ -35,8 +35,7 @@ class Game {
 
         this._bird = new Bird ( {
             x: this._config.bird.x,
-            //y: this._config.bird.y,
-            y: 20,
+            y: this._config.bird.y,
             width: this._config.bird.width,
             height: this._config.bird.height,
             frames: this._config.bird.frames,
@@ -54,7 +53,7 @@ class Game {
     }
 
     draw() {
-        console.log('this bird y', this._bird.y)
+        console.log('this bird _y', this._bird._y)
         console.log('this bird x', this._bird.x)
         this._bird.draw()
     }
